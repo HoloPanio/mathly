@@ -108,3 +108,6 @@ public/
 
 #temp
 /docs/
+
+#ignore weird macos file
+.DS_Store
