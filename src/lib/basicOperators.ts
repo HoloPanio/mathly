@@ -28,7 +28,7 @@ export const BasicOperators = {
    * 
    * @param numbers - a number or an array of numbers
    * @param add - the number to add to each number
-   * @returns {number} The sum of all the numbers provided
+   * @returns {number | number[]} The sum of all the numbers provided
    */
   sumFrom(numbers: number | number[], add: number): number | number[] {
     testNaN([numbers]);
@@ -62,7 +62,7 @@ export const BasicOperators = {
    * The result will be a number or set of numbers that are the difference of the first number(s) minus the second argument.
    *
    * @param numbers - a number or an array of numbers
-   * @returns {number} The subtraction of all the numbers provided
+   * @returns {number | number[]} The subtraction of all the numbers provided
    */
   subtractBy(numbers: number | number[], sub: number): number | number[] {
     testNaN([numbers]);
@@ -179,9 +179,9 @@ export const BasicOperators = {
    *
    * @param numbers - Your set of dividends
    * @param divisor - The divisor you want to divide the dividends by.
-   * @returns An array of quotents equal to all of your dividends divided by your divisors
+   * @returns {number | number[]} An array of quotents equal to all of your dividends divided by your divisors
    */
-  divideBy(numbers: number | number[], divisor: number) {
+  divideBy(numbers: number | number[], divisor: number): number | number[] {
     testNaN([numbers]);
     testNaN([divisor]);
 
@@ -196,7 +196,7 @@ export const BasicOperators = {
    * It returns the result of this operation as a single number.
    * 
    * @param numbers The numbers to raise to each other sequentially
-   * @returns The result of raising each number to the next number in the sequence
+   * @returns {number} The result of raising each number to the next number in the sequence
    */
   riseSeq(...numbers: (number | number[])[]): number {
     testNaN(numbers);
@@ -213,7 +213,7 @@ export const BasicOperators = {
    * 
    * @param numbers The numbers to raise to the exponent
    * @param exponent The exponent to raise the numbers to
-   * @returns A number or set of numbers raised to the exponent
+   * @returns {number | number[]} A number or set of numbers raised to the exponent
    */
   riseTo(numbers: number | number[], exponent: number): number | number[] {
     testNaN([numbers]);
